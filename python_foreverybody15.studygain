@@ -1,0 +1,17 @@
+import urllib.request, urllib.parse, urllib.error
+import json
+count = 0
+
+url = 'http://py4e-data.dr-chuck.net/comments_766726.json'
+
+print('Retrieving', url)
+data = urllib.request.urlopen(url).read()
+info = json.loads(data)
+tot= 0
+print('Retrieved',len(data),'characters')
+print('Count:',len(info["comments"]))
+
+
+for item in range(0, len(info["comments"])):
+    tot += int(info["comments"][item]["count"])
+print("Sum",tot)
