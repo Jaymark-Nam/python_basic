@@ -1,6 +1,6 @@
 
 
-#Finding the organization code. By Jae Mark Nam
+#Finding the organization code. By Jaewoo Mark Nam
 
 import re
 
